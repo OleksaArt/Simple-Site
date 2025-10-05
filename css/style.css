@@ -79,7 +79,7 @@ html {
 .how-work-description,
 .about-me-description,
 .header-description{
-    width: 540px;
+    width: min(100% , 545px);
     font-weight: 400;
     line-height: 164%;
     font-size: 1rem;
@@ -90,7 +90,7 @@ html {
     margin-left: 1px;
 }
 .header-btn{
-    width: 225px;
+    width: max(100% , 225px);
     margin-top: 52px;
     padding: 25px 41px 17px 41px;
     background-color: var(--primary-color);
@@ -125,6 +125,7 @@ html {
 }
 .projects-list{
     display: flex;
+    flex-wrap: wrap;
     gap: 45px;
 }
 .projects-list-item{
@@ -153,12 +154,12 @@ html {
     display: block;
     margin: 0 auto;
     margin-top: 57px;
-    width: 1110px;
-    height: 600px;
+    width: min(100% , 1110px);
+    height: auto;
 }
 .how-work-video img{
-    width: 1110px;
-    height: 600px;
+    width: min(100% , 1110px);
+    height: auto;
 }
 .btn-play-video{
     display: block;
@@ -170,7 +171,7 @@ html {
     transform: translate( -50px, -50%);
 }
 .btn-play-video img{
-    width: 100px;
+    width: min(100% , 100px);
     height: auto;
 }
 .footer{
