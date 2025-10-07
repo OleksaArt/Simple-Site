@@ -1,0 +1,189 @@
+@use "./helpers/index.scss" as *;
+
+
+
+
+html {
+  font-size: var(--font-size);
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+.container{
+    max-width: min(100% - 40px , 1120px);
+    margin-inline: auto;
+}
+.header{
+    background-color: $bg-dark-gray;
+    padding: 80px 0px 142px 0px;
+}
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 45px;
+    &-item {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 164%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    &-item:first-child{
+        color: $primary-color;
+        font-weight: 500;
+    }
+}
+.header-title{
+    max-width: 541px;
+    margin-top: 146px;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 164%;
+}
+.description{
+    max-width: 545px;
+    font-weight: 400;
+    line-height: 164%;
+    font-size: 1rem;
+    color: $dark-gray;
+}
+.header-description{
+    margin-top: 34px;
+    margin-left: 1px;
+}
+.header-btn{
+    max-width: 225px;
+    margin-top: 52px;
+    padding: 25px 41px 17px 41px;
+    background-color: $primary-color;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    line-height: 164%;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.about-me{
+    background-color: $bg-light-gray;
+    padding: 112px 0px 100px 0px;
+}
+.subtitle{
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 100%;
+    text-transform: capitalize;
+}
+.how-work-description,
+.about-me-description{
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.projects{
+    background-color: $primary-color;
+    padding: 100px 0px 100px 0px;
+}
+.projects-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    &-item{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        gap: 20px;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 164%;
+        div{
+            display: flex;
+            flex-direction: column;
+            span:first-child{
+                font-size: 1.3125rem;
+                font-weight: 500;
+            }
+        }
+ 
+    }
+}
+.how-work{
+    background-color: $bg-dark-gray;
+    padding: 100px 0px 100px 0px;
+}
+.how-work-video{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-top: 57px;
+    width: min(100% - 40px, 1110px);
+    height: auto;
+}
+.how-work-video img{
+    width: min(100%, 1110px);
+    height: auto;
+}
+.btn-play-video{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: none;
+    z-index: 4;
+    transform: translate( -50px, -50%);
+}
+.btn-play-video img{
+    max-width: 100px;
+    height: auto;
+}
+.footer{
+    background-color: $primary-color;
+    padding: 50px 0px 50px 0px;
+}
+.footer-title{
+    font-weight: 500;
+    color: #fff;
+    line-height: 100%;
+    font-size: 1.3125rem;
+}
+.info-p{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 164%;
+}
+@include media-down(lg){
+    .btn-play-video{
+        transform: translate( -25px, -50%);
+    }
+    .btn-play-video img{
+        width: 50px;
+        height: auto;
+    }
+}
+@include media-down(sm){
+    .nav-list{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 24px;
+    }
+    p{
+        padding: 6px;
+    }
+    .header-title{
+        font-size: 2.5rem;
+    }
+    .btn-play-video img{
+        width: 50px;
+        height: auto;
+    }
+    .btn-play-video{
+        transform: translate( -25px, -50%);
+    }
+    .how-work-video{
+        padding: 20px;
+    }
+    .projects-list{
+        justify-content: center;
+    }
+}
